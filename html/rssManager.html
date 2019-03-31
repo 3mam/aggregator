@@ -1,0 +1,68 @@
+<html>
+
+<head>
+	<title>Agregator</title>
+	<meta content="">
+	<meta charset="utf-8" />
+	<style>
+		#fileLoader,
+		#send {
+			display: none;
+		}
+
+		.tooltip {
+			position: relative;
+			display: inline-block;
+		}
+
+		.tooltip .tooltiptext {
+			visibility: hidden;
+			width: 190px;
+			background-color: black;
+			color: #fff;
+			text-align: center;
+			border-radius: 6px;
+			padding: 0px 0;
+
+			/* Position the tooltip */
+			position: absolute;
+			z-index: 1;
+		}
+
+		.tooltip:hover .tooltiptext {
+			visibility: visible;
+		}
+
+		.url {
+			color: white;
+		}
+
+		.button {
+			text-decoration: none;
+			padding: 1px;
+			font-size: 150%;
+			color: black;
+		}
+
+		.button:hover {
+			text-decoration: none;
+			color: white;
+			background: black;
+		}
+	</style>
+</head>
+
+<body>
+	<form method="post" action="/rss?manager" enctype="multipart/form-data" id="formSend">
+		<input type="file" id="fileLoader" name="files" accept=".opml" onchange="getElementById('send').click()" />
+		<input type="submit" id="send" />
+	</form>
+	<form method="get" action="/rss" id="formBack">
+	</form>
+	<button form="formSend" type="button" onclick="getElementById('fileLoader').click()">Importuj listę</button>
+	<button form="formBack" type="submit">wróć</button>
+	<button onclick="location.href='/rss?add'" type="button">dodaj</button>
+	{{.Data}}
+</body>
+
+</html>

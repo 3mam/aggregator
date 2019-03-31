@@ -1,0 +1,53 @@
+<html>
+
+<head>
+	<title>Agregator</title>
+	<meta content="">
+	<meta charset="utf-8" />
+	<style>
+ 	.button {
+		display:block;
+		text-decoration:none;
+		padding: 1px;
+		font-size: 150%;
+		color: black;
+	}
+	.button:hover {
+		text-decoration:none;
+		color: white;
+		background: black;
+	} 
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+		
+		td, th {
+			border: 0px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+		}
+		
+		tr:nth-child(even) {
+			background-color: #dddddd;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h1>{{.Title}}</h1>
+	<a class="" href="/rss?manager">zarządzaj</a>
+	<a class="" href="/rss?read={{.List}}">odznacz wszystkie jako przeczytane</a>
+	<a class="" href="/twitter">twitter</a>
+
+	<table>
+		<tr>
+			<th>Autor</th>
+			<th>Tytuł</th>
+		</tr>
+		{{.Data}}
+	</table>
+</body>
+
+</html>

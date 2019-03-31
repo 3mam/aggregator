@@ -1,0 +1,25 @@
+<html>
+
+<head>
+	<title>Agregator</title>
+	<meta content="">
+	<meta charset="utf-8" />
+	<style>
+		.form {
+			margin: 200px auto;
+			width: 200px;
+		}
+	</style>
+</head>
+
+<body>
+	<form class="form" method="post" action="/rss?delete={{.Node}}">
+    Usunąć {{.Title}}?
+    <br>
+    <input type="submit" value="usuń">
+  </form>
+  <button form="formBack" type="submit">wróć</button>
+  
+</body>
+
+</html>

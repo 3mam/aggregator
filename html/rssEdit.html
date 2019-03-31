@@ -1,0 +1,30 @@
+<html>
+
+<head>
+	<title>Agregator</title>
+	<meta content="">
+	<meta charset="utf-8" />
+	<style>
+		.form {
+			margin: 200px auto;
+			width: 200px;
+		}
+	</style>
+</head>
+
+<body>
+	<form class="form" method="post" action="/rss?edit={{.Node}}">
+		Tytuł:
+		<input type="text" name="title" value="{{.Title}}">
+		<br> Adres:
+		<input type="text" name="xmlurl" value="{{.Xmlurl}}">
+		<br> Folder:
+		<select name="type">
+			{{.Type}}
+		</select>
+		<br>
+		<input type="submit" value="zapisz">
+	</form>
+</body>
+
+</html>

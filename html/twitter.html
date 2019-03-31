@@ -1,0 +1,26 @@
+<html>
+
+<head>
+  <title>Agregator</title>
+  <meta content="">
+  <meta charset="utf-8" />
+  <style>
+    .twitt {
+        width:50%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>{{.Title}}</h1>
+ 	<a class="" href="/twitter?read={{.List}}">odznacz wszystkie jako przeczytane</a>
+  <a href="/rss">rss</a>
+  <div class="twitt">
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    {{.Data}}
+  </div>
+</body>
+
+</html>
